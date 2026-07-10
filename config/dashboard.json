@@ -1,1 +1,18 @@
-
+{
+  "dashboardTitle": "AIANDI Plant Operations Dashboard",
+  "subtitle": "Config-driven monitoring dashboard with drag-and-drop layout",
+  "pages": [
+    {
+      "id": "overview",
+      "title": "Overview",
+      "widgets": [
+        { "id": "waterPressure", "type": "value", "title": "Water Tower Pressure", "tag": "WaterTower.Pressure", "value": 50.4, "units": "PSI", "status": "normal", "x": 0, "y": 0, "w": 3, "h": 2 },
+        { "id": "waterLevel", "type": "tank", "title": "Water Tower Level", "tag": "WaterTower.Level", "value": 600.8, "units": "ft", "percent": 78, "status": "normal", "x": 3, "y": 0, "w": 3, "h": 3 },
+        { "id": "plantAir", "type": "value", "title": "Plant Air", "tag": "PlantAir.Pressure", "value": 99, "units": "PSI", "status": "normal", "x": 6, "y": 0, "w": 3, "h": 2 },
+        { "id": "quarryFlow", "type": "bar", "title": "Quarry Flow", "tag": "Quarry.Flow", "value": 5469, "units": "GPM", "percent": 68, "status": "normal", "x": 9, "y": 0, "w": 3, "h": 2 },
+        { "id": "boiler1", "type": "status", "title": "Boiler 1", "tag": "Boiler1.Status", "value": "FAULTED", "units": "", "status": "alarm", "x": 0, "y": 2, "w": 3, "h": 2 },
+        { "id": "chilledWater", "type": "value", "title": "Chilled Water", "tag": "Chiller.SupplyTemp", "value": 45.8, "units": "°F", "status": "normal", "x": 6, "y": 2, "w": 3, "h": 2 }
+      ]
+    }
+  ]
+}

@@ -1,1 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AIANDI Plant Operations Dashboard</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gridstack@10.3.1/dist/gridstack.min.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1 id="dashboard-title">Plant Operations Dashboard</h1>
+      <p id="dashboard-subtitle">Live utility monitoring overview</p>
+    </div>
+    <div class="topbar-actions">
+      <div id="last-update" class="update-pill">Last update: --</div>
+      <button id="admin-toggle" class="button">Admin Mode</button>
+      <button id="add-widget" class="button secondary" disabled>Add Widget</button>
+      <button id="save-layout" class="button success" disabled>Save Layout</button>
+    </div>
+  </header>
 
+  <section id="alarm-banner" class="alarm-banner normal">
+    <strong>No Active Alarms</strong>
+  </section>
+
+  <main class="dashboard-shell">
+    <nav class="sidebar">
+      <div class="sidebar-title">Systems</div>
+      <button class="nav-item active" data-page="overview">Overview</button>
+      <button class="nav-item" data-page="water">Water</button>
+      <button class="nav-item" data-page="pumps">Pumps</button>
+      <button class="nav-item" data-page="boilers">Boilers</button>
+      <button class="nav-item" data-page="chillers">Chillers</button>
+    </nav>
+
+    <section class="workspace">
+      <div class="page-heading">
+        <h2 id="page-title">Overview</h2>
+        <span id="mode-status">Operator View</span>
+      </div>
+      <div class="grid-stack"></div>
+    </section>
+  </main>
+
+  <template id="widget-template">
+    <div class="grid-stack-item">
+      <div class="grid-stack-item-content widget-card">
+        <div class="widget-header">
+          <div>
+            <div class="widget-title"></div>
+            <div class="widget-tag"></div>
+          </div>
+          <span class="status-dot"></span>
+        </div>
+        <div class="widget-value"></div>
+        <div class="widget-footer"></div>
+      </div>
+    </div>
+  </template>
+
+  <script src="https://cdn.jsdelivr.net/npm/gridstack@10.3.1/dist/gridstack-all.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
